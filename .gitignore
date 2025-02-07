@@ -1,0 +1,32 @@
+# Ignore build and publish artifacts
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.log
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.csproj.user
+
+# Ignore .NET environment files
+.env
+secrets.json
+appsettings.json
+appsettings.Development.json
+
+# Ignore dependency folders
+node_modules/
+packages/
+.vs/
+
+# Ignore IDE-specific files
+.idea/
+*.iml
+
+# Ignore temporary and OS files
