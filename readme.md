@@ -5,6 +5,7 @@ This .NET console application reads user data from a CSV file and inserts it int
 ## 📌 Features
 - Reads user data from a CSV file (`Name`, `Email`, `CreatedAt`).
 - Inserts data into a MySQL database.
+- Inserts data into a Cosmos DB database.
 - Ensures the required table exists before inserting.
 - Supports duplicate handling with `ON DUPLICATE KEY UPDATE`.
 
@@ -16,6 +17,7 @@ Before running the application, ensure you have:
 
 - **.NET 8 SDK** (Download: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download))
 - **MySQL Server** installed and running
+- **Cosmos DB** account with a database and collection
 - **CSV file** formatted as:
   ```csv
   Name,Email,CreatedAt
@@ -23,8 +25,8 @@ Before running the application, ensure you have:
   Jane Smith,janesmith@example.com,2024-02-05 15:45:00
 
 ```bash
-git clone https://github.com/benhalverson/csv-to-mysql-importer.git
-cd csv-to-mysql-importer
+git clone git@github.com:benhalverson/csv-to-db.git
+cd csv-to-db
 ```
 
 ```bash
@@ -38,5 +40,5 @@ cp appsettings.json.example appsettings.json
 
 ## 🚦 Running the Application
 ```bash
-dotnet run -- data/data.csv
+Usage: dotnet run --db=<mysql|cosmos> --data=<path-to-csv>
 ```
